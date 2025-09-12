@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true, // Optional: if you want to use Material 3 features
+        useMaterial3: true,
       ),
       home: const MyHomePage(title: 'EZ Pantry'),
     );
@@ -33,9 +33,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 0; // 0 for Pantry, 1 for Recipes, 2 for Shopping
 
-  // Now use your actual page widgets
   static const List<Widget> _widgetOptions = <Widget>[
     PantryPage(),
     RecipesPage(),
@@ -46,6 +45,12 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _selectedIndex = index;
     });
+  }
+
+  void _onScanButtonPressed() {
+    // TODO: Implement your barcode scanning logic here
+    print('Scan button pressed on Pantry Page!');
+    // For example, you might navigate to a new screen or show a dialog
   }
 
   @override
@@ -74,9 +79,18 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.blue,
         onTap: _onItemTapped,
       ),
+      // Conditionally render the FloatingActionButton
+      floatingActionButton: _selectedIndex == 0 // Show only if Pantry tab (index 0) is selected
+          ? FloatingActionButton.extended(
+        onPressed: _onScanButtonPressed,
+        icon: const Icon(Icons.qr_code_scanner),
+        label: const Text('Scan'),
+      )
+          : null, // Render nothing if not on the Pantry tab
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat, // Or your preferred location
     );
   }
 }

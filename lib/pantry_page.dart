@@ -7,7 +7,7 @@ class PantryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: Text(
-        'This is the Pantry Page',
+        'Pantry',
         style: TextStyle(fontSize: 24),
       ),
     );

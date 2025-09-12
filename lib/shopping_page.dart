@@ -7,7 +7,7 @@ class ShoppingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: Text(
-        'This is the Shopping Page',
+        'Shopping',
         style: TextStyle(fontSize: 24),
       ),
     );

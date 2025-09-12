@@ -7,7 +7,7 @@ class RecipesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: Text(
-        'This is the Recipes Page',
+        'Recipes',
         style: TextStyle(fontSize: 24),
       ),
     );
