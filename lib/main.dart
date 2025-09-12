@@ -1,3 +1,4 @@
+import 'package:ez_pantry/scan_page.dart';
 import 'package:flutter/material.dart';
 import 'pantry_page.dart'; // Import the new pantry page
 import 'recipes_page.dart'; // Import the new recipes page
@@ -47,10 +48,22 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void _onScanButtonPressed() {
-    // TODO: Implement your barcode scanning logic here
-    print('Scan button pressed on Pantry Page!');
-    // For example, you might navigate to a new screen or show a dialog
+  void _onScanButtonPressed() async {
+    final result = await Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => ScanPage()),
+    );
+
+    if (result != null) {
+      // Here you can handle what to do with the scanned code
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Scanned barcode: $result')),
+      );
+
+      print('Scanned barcode: $result');
+
+      // TODO: Call API or update pantry items with this barcode
+    }
   }
 
   @override
