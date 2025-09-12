@@ -1,5 +1,5 @@
 # EZ-Pantry
-
+Your ingredients, recipes, and plans - all in one place.
 ## MVP
 - user login
 - barcode scanning products
