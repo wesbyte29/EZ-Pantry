@@ -29,6 +29,8 @@ Following the MVP, these features are planned for future development.
 * **Barcode Scanning**: Quickly add products to your virtual pantry by scanning barcodes with your phone.
 * **Meal Planning**: Plan future meals based on the food items available in the pantry.
 * **Personal Recipe Collection**: Save your personal recipes for later use.
+* **LLM Integration to suggest recipes**
+* **Ingredient expiration alerts**
 
 ---
 
