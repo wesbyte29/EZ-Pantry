@@ -53,31 +53,3 @@ The following technologies will be used to build the application.
 
 
 
-lib/
-|
-├── main.dart             # The entry point of your application
-|
-├── core/                 # Shared code used across multiple features
-|   ├── api/              # API clients, data sources (e.g., api_service.dart)
-|   ├── models/           # Shared data models (e.g., user.dart)
-|   ├── widgets/          # Common, reusable widgets (e.g., CustomButton, LoadingSpinner)
-|   ├── services/         # Shared business logic (e.g., authentication_service.dart)
-|   └── utils/            # Utility functions, constants, etc.
-|
-└── features/             # Each feature of your app gets its own folder
-    |
-    ├── login/
-    |   ├── widgets/      # Widgets specific to the login feature
-    |   ├── view/         # The main screen/page widget for this feature (e.g., login_screen.dart)
-    |   └── bloc/         # State management logic (e.g., login_bloc.dart, login_state.dart)
-    |
-    ├── home/
-    |   ├── widgets/
-    |   ├── view/
-    |   └── bloc/
-    |
-    └── product_details/
-        ├── models/       # Models used only by this feature
-        ├── widgets/
-        ├── view/
-        └── provider/     # State management (using Provider instead of BLoC)
