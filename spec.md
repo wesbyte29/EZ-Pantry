@@ -1,5 +1,3 @@
-Of course. Here is the design specification in Markdown format with the citations removed.
-
 ## EZ Pantry App: Design Specification
 
 This document outlines the design, requirements, and technical specifications for the EZ Pantry mobile application, based on the project presentation.
