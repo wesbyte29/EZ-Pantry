@@ -50,3 +50,34 @@ The following technologies will be used to build the application.
 * **Database**: A **PostgreSQL** database will store application data because it supports structured data, is widely used, and is open-source.
 * **Hosting**: The backend and database will be hosted on **Render** because it is a full app hosting platform that is scalable and manages Postgres without extra setup.
 * **Version Control**: **GitHub** will be used for version control. Issues, milestones, and merge requests will keep the project organized and provide accountability.
+
+
+
+lib/
+|
+├── main.dart             # The entry point of your application
+|
+├── core/                 # Shared code used across multiple features
+|   ├── api/              # API clients, data sources (e.g., api_service.dart)
+|   ├── models/           # Shared data models (e.g., user.dart)
+|   ├── widgets/          # Common, reusable widgets (e.g., CustomButton, LoadingSpinner)
+|   ├── services/         # Shared business logic (e.g., authentication_service.dart)
+|   └── utils/            # Utility functions, constants, etc.
+|
+└── features/             # Each feature of your app gets its own folder
+    |
+    ├── login/
+    |   ├── widgets/      # Widgets specific to the login feature
+    |   ├── view/         # The main screen/page widget for this feature (e.g., login_screen.dart)
+    |   └── bloc/         # State management logic (e.g., login_bloc.dart, login_state.dart)
+    |
+    ├── home/
+    |   ├── widgets/
+    |   ├── view/
+    |   └── bloc/
+    |
+    └── product_details/
+        ├── models/       # Models used only by this feature
+        ├── widgets/
+        ├── view/
+        └── provider/     # State management (using Provider instead of BLoC)
