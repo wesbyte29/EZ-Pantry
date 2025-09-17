@@ -18,6 +18,8 @@ The **Minimum Viable Product (MVP)** will focus on the essential functionalities
 * **Manual Item Entry**: Allows users to effortlessly enter custom items into their virtual pantry.
 * **Inventory Tracking**: Enables users to monitor the quantity of items and their expiration dates.
 
+Get CRUD operations in place.
+
 ---
 
 ### 3. Future Features
