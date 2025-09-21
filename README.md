@@ -11,3 +11,5 @@ Your ingredients, recipes, and plans - all in one place.
 - Joseph Henderson (frontend)
 - Andrew Malone (backend)
 - Jonathan Lindley (fullstack)
+
+<img width="1170" height="1327" alt="gravity_diagram" src="https://github.com/user-attachments/assets/f8349516-0ea2-42fa-b833-e001ce7b4510" />
