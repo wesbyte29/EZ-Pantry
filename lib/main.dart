@@ -35,37 +35,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _selectedIndex = 0; // 0 for Pantry, 1 for Recipes, 2 for Shopping
+  int _selectedIndex = 0; // 0 for Recipes, 1 for Pantry, 2 for Shopping
 
   static const List<Widget> _widgetOptions = <Widget>[
     RecipesPage(),
     PantryPage(),
     ShoppingPage(),
-    LoginPage(),
   ];
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
-  }
-
-  void _onScanButtonPressed() async {
-    final result = await Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => ScanPage()),
-    );
-
-    if (result != null) {
-      // Here you can handle what to do with the scanned code
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Scanned barcode: $result')),
-      );
-
-      print('Scanned barcode: $result');
-
-      // TODO: Call API or update pantry items with this barcode
-    }
   }
 
   @override
@@ -97,15 +78,6 @@ class _MyHomePageState extends State<MyHomePage> {
         selectedItemColor: Colors.blue,
         onTap: _onItemTapped,
       ),
-      // Conditionally render the FloatingActionButton
-      floatingActionButton: _selectedIndex == 0 // Show only if Pantry tab (index 0) is selected
-          ? FloatingActionButton.extended(
-        onPressed: _onScanButtonPressed,
-        icon: const Icon(Icons.qr_code_scanner),
-        label: const Text('Scan'),
-      )
-          : null, // Render nothing if not on the Pantry tab
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat, // Or your preferred location
     );
   }
 }
