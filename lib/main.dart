@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'pantry_page.dart'; // Import the new pantry page
 import 'recipes_page.dart'; // Import the new recipes page
 import 'shopping_page.dart'; // Import the new shopping page
+import 'login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,9 +38,10 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0; // 0 for Pantry, 1 for Recipes, 2 for Shopping
 
   static const List<Widget> _widgetOptions = <Widget>[
-    PantryPage(),
     RecipesPage(),
+    PantryPage(),
     ShoppingPage(),
+    LoginPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -79,12 +81,12 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.inventory_2_outlined),
-            label: 'Pantry',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.menu_book_outlined),
             label: 'Recipes',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.inventory_2_outlined),
+            label: 'Pantry',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart_outlined),
