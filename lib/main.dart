@@ -36,7 +36,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _selectedIndex = 0; // 0 for Recipes, 1 for Pantry, 2 for Shopping
+  int _selectedIndex = 1; // 0 for Recipes, 1 for Pantry, 2 for Shopping
 
   static const List<Widget> _widgetOptions = <Widget>[
     RecipesPage(),
