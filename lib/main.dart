@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'EZ Pantry'),
+      // home: const MyHomePage(title: 'EZ Pantry'),
+      home: const LoginPage(),
     );
   }
 }
@@ -41,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
     RecipesPage(),
     PantryPage(),
     ShoppingPage(),
+    LoginPage(),
   ];
 
   void _onItemTapped(int index) {
